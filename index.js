@@ -13,7 +13,7 @@ app.use(express.json());
 app.use("/images", express.static(path.join(__dirname,"/images")));
 app.use(cors({
     origin:["http://localhost:3000",
-"https://mern-blog-app.onrender.com"]
+"https://mern-blog-app.onrender.com","https://mern-blog-app-px1a.onrender.com"]
 }));
 
 const authRoute=require("./routes/auth");
