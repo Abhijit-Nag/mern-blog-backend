@@ -11,10 +11,7 @@ const cors=require("cors");
 // json format 
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname,"/images")));
-app.use(cors({
-    origin:["http://localhost:3000",
-"https://mern-blog-app.onrender.com","https://mern-blog-app-px1a.onrender.com","https://imaginative-piroshki-8f652c.netlify.app/"]
-}));
+app.use(cors());
 
 const authRoute=require("./routes/auth");
 const usersRoute= require("./routes/users");
