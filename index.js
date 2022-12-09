@@ -12,7 +12,7 @@ const cors=require("cors");
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname,"/images")));
 app.use(cors({
-    origin:["https://abhijit-mern-blog-app.netlify.app","http://localhost:3000"]
+    origin:["https://abhijit-mern-blog-app.netlify.app","http://localhost:3000"],
 }));
 
 const authRoute=require("./routes/auth");
