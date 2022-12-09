@@ -11,21 +11,13 @@ const cors=require("cors");
 // json format 
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname,"/images")));
+app.use(express.urlencoded({ extended: false}));
 app.use(cors({
-    origin:["https://abhijit-mern-blog-app.netlify.app","http://localhost:3000"],
+    origin:["http://localhost:3000","https://abhijit-mern-blog-app.netlify.app"],
 }));
 
-//app.options('*',cors());
 
-var headerSettings = function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', 'example.com');
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
 
-    next();
-}
-
-app.use(headerSettings);
 
 const authRoute=require("./routes/auth");
 const usersRoute= require("./routes/users");
