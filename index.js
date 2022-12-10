@@ -19,6 +19,7 @@ app.use(cors({
 
 
 
+
 const authRoute=require("./routes/auth");
 const usersRoute= require("./routes/users");
 const postRoute= require("./routes/posts");
